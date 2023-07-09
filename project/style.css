@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body {
+    background:  hsl(234, 29%, 20%);
+}
+.container {
+    width: 760px;
+    height: 520px;
+    background: hsl(0, 0%, 100%);
+    margin: 110px auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.info {
+    background-color: white;
+    width: 360px;
+    height: 480px;
+    margin: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.image {
+    width: 360px;
+    height: 480px;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-image: url('../assets/images/illustration-sign-up-desktop.svg');
+    background-position: center;
+    background-size: 370px 480px;
+}
+ 
+.head {
+    margin: 20px;
+    padding-left: 15px;
+}
+h1 {
+    font-weight: 700;
+    font-size: 46px;
+    margin-top: 40px;
+    color: hsl(234, 29%, 20%);
+}
+p {
+    font-size: 15px;
+    margin-top: 15px;
+    color: hsl(234, 29%, 20%);
+}
+ul {
+    margin-top: 15px;
+    list-style-type: none;
+    font-size: 14px;
+    color: hsl(234, 29%, 20%);
+}
+li {
+    margin-top: 10px;
+    display: flex;
+    padding-bottom: 8px;
+}
+svg {
+    margin-right: 10px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-top: 5px;
+    padding-left: 15px;
+    gap: 10px;
+    position: relative;
+}
+
+input[type='text'] {
+    height: 45px;
+    width: 100%;
+    padding-left: 17.5px;
+    border-radius: 5px;
+    border: hsl(231, 7%, 60%) solid 1px;
+}
+
+input[type='submit'] {
+    height: 45px;
+    width: 100%;
+    margin-top: 15px;
+    background-color: hsl(235, 18%, 26%);
+    color: white;
+    border-radius: 5px;
+}
+
+input[type='submit']:hover, 
+input[type='submit']:active
+{
+    background: linear-gradient(to bottom right, hsl(344, 100%, 67%), hsl(4, 100%, 67%));
+    border: none;
+    box-shadow: 0 5px 20px hsl(4, 100%, 67%);
+}
+
+@media (max-width: 750px) {
+    body {
+        background: hsl(235, 18%, 26%);
+    }
+.container {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+.image {
+    margin: 0;
+    background-image: url('../assets/images/illustration-sign-up-mobile.svg');
+    width: 100vw;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw 40vh;
+    margin-top: 0;
+}
+.info {
+    margin: auto;
+}
+}
+
+#error {
+    display: none;
+    pointer-events: none;
+}

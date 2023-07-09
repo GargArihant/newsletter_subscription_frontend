@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="container">
+       <img src="../assets/images/icon-success.svg" alt="">
+       <h1>Thanks for subscribing!</h1>
+       <p>A confirmation email has been sent to <span id="email"></span> Please open it and click the button inside to confirm the subscription.</p>
+       <button>Dismiss message</button>
+    </div>
+</body>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const email = urlParams.get('email');
+    console.log(email);
+    const span =document.getElementById('email');
+    span.innerHTML = email;
+</script>
+</html>
